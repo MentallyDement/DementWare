@@ -3303,7 +3303,7 @@ TRANSLATIONS = {
         ["ESP"] = "ESP & Visuals",
         ["Soru"] = "Soru Engine",
         ["Appearance"] = "Appearance",
-        ["VFX"] = "Sacred VFX",
+        ["VFX"] = "DementWare VFX",
         ["Misc"] = "Misc",
 
         -- Cards
@@ -3334,7 +3334,7 @@ TRANSLATIONS = {
         ["Aura VFX"] = "Aura VFX",
         ["Fake Body"] = "Fake Body",
         ["Ambient Lights"] = "Ambient Lights",
-        ["Sacred VFX"] = "Sacred VFX",
+        ["DementWare VFX"] = "DementWare VFX",
         ["Performance"] = "Performance",
         ["Socials & Settings"] = "Socials & Settings",
         ["Language"] = "Language",
@@ -3395,7 +3395,7 @@ TRANSLATIONS = {
 
         -- Buttons & Labels
         ["Copy Discord Link"] = "💬 Copy Discord Link",
-        ["Copy TikTok"] = "🎵 TikTok: @rivalsxrodx",
+        ["Copy TikTok"] = "🎵 TikTok: @MentallyDement",
         ["Save Config"] = "💾 Save Config",
         ["Reset Config"] = "🔄 Reset Config",
         ["LangBtn"] = "🌐 Language: English (EN)",
@@ -3439,7 +3439,7 @@ TRANSLATIONS = {
         ["Aura VFX"] = "Aura VFX",
         ["Fake Body"] = "Cuerpo Falso",
         ["Ambient Lights"] = "Luces Ambientes",
-        ["Sacred VFX"] = "Efectos Visuales Sacred",
+        ["DementWare VFX"] = "Efectos Visuales Sacred",
         ["Performance"] = "Rendimiento",
         ["Socials & Settings"] = "Social y Ajustes",
         ["Language"] = "Idioma",
@@ -3500,7 +3500,7 @@ TRANSLATIONS = {
 
         -- Buttons & Labels
         ["Copy Discord Link"] = "💬 Copiar Enlace de Discord",
-        ["Copy TikTok"] = "🎵 TikTok: @rivalsxrodx",
+        ["Copy TikTok"] = "🎵 TikTok: @DementWare",
         ["Save Config"] = "💾 Guardar Configuración",
         ["Reset Config"] = "🔄 Restablecer Configuración",
         ["LangBtn"] = "🌐 Idioma: Español (ES)",
@@ -3517,7 +3517,7 @@ local categories = {
     { key = "Soru", page = SoruPage, y = 174 },
     { key = "Appearance", page = AppearancePage, y = 204 },
     { key = "Songs", page = SongsPage, y = 234 },
-    { key = "VFX", page = SacredVFXPage, y = 264 },
+    { key = "VFX", page = DementWareVFXPage, y = 264 },
     { key = "Misc", page = MiscPage, y = 294 },
 }
 
@@ -3574,7 +3574,7 @@ function updateUILanguage(lang)
 
     if langBtn then langBtn.Text = dict["LangBtn"] or (currentLang == "ES" and "🌐 Idioma: Español (ES)" or "🌐 Language: English (EN)") end
     if copyBtn then copyBtn.Text = dict["Copy Discord Link"] or "💬 Copy Discord Link" end
-    if copyTikTokBtn then copyTikTokBtn.Text = dict["Copy TikTok"] or "🎵 TikTok: @rivalsxrodx" end
+    if copyTikTokBtn then copyTikTokBtn.Text = dict["Copy TikTok"] or "🎵 TikTok: @MentallyDement" end
     if saveBtn then saveBtn.Text = dict["Save Config"] or "💾 Save Config" end
     if resetBtn then resetBtn.Text = dict["Reset Config"] or "🔄 Reset Config" end
 end
@@ -4606,7 +4606,7 @@ function showFloatingComboTrigger(show)
     if not show then return end
 
     floatingTriggerGui = Instance.new("ScreenGui")
-    floatingTriggerGui.Name = "Sacred_Macro_Floating_Combo"
+    floatingTriggerGui.Name = "DementWare_Macro_Floating_Combo"
     floatingTriggerGui.ResetOnSpawn = false
     floatingTriggerGui.Parent = playerGui
 
@@ -5341,7 +5341,7 @@ for _, sInfo in ipairs(songsData) do
                 end
             end
             local snd = Instance.new("Sound")
-            snd.Name = "SacredSong_" .. sInfo.name
+            snd.Name = "DementWareSong_" .. sInfo.name
             snd.SoundId = "rbxassetid://" .. sInfo.id
             snd.Volume = 1
             snd.Looped = true
@@ -5469,9 +5469,9 @@ Players.PlayerAdded:Connect(refreshBlacklistUI)
 Players.PlayerRemoving:Connect(refreshBlacklistUI)
 end
 
--- Sacred VFX Page
+-- DementWare VFX Page
 do
-local vfxMainCard = createModuleCard("DementWare VFX", 110, SacredVFXPage)
+local vfxMainCard = createModuleCard("DementWare VFX", 110, DementWareVFXPage)
 
 local vfxTitle = Instance.new("TextLabel", vfxMainCard)
 vfxTitle.Text = "✨DementWare✨"
